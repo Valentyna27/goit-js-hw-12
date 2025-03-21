@@ -4,20 +4,35 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Homework 11</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
+    <form class="form">
+      <label class="form-label">
+        <input
+          class="form-input"
+          type="text"
+          id="search"
+          name="search"
+          autocomplete="off"
+          placeholder="Search images..."
+        />
+      </label>
+      <button class="form-button" type="submit">Start</button>
+    </form>
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+    <ul class="gallery" id="gallery"></ul>
 
-    <load src="./partials/footer.html" />
+    <button class="load-more-btn" type="button">Load more</button>
+    <div class="loader"></div>
 
-    <script type="module" src="./main.js"></script>
+    <script type="module" src="./main.js" defer></script>
+    <script type="module" src="./js/pixabay-api.js" defer></script>
+    <script type="module" src="./js/render-functions.js" defer></script>
   </body>
 </html>
